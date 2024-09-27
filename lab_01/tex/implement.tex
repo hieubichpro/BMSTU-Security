@@ -1,0 +1,166 @@
+\chapter{Технологическая часть}
+
+В данном разделе будут рассмотрены средства реализации, а также представлены листинги реализаций алгоритма шифрования машины <<Энигма>>.
+
+\section{Средства реализации}
+В данной работе для реализации был выбран язык программирования $C++$. Данный язык удоволетворяет поставленным критериям по средствам реализации.
+
+\section{Реализация алгоритма}
+
+В листингах \ref{lst:enigma1} представлена реализация алгоритма шифрования машины <<Энигма>>.
+
+\begin{center}
+    \captionsetup{justification=raggedright,singlelinecheck=off}
+    \begin{lstlisting}[label=lst:enigma1,caption=Реализация алгоритма шифрования машины <<Энигма>>]
+#include <iostream>
+
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+const int ALPHABET_SIZE = 64;
+
+const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,";
+
+class Rotor {
+	public:
+	Rotor(const string wiring, int position = 0)
+	{
+		string part1 = wiring.substr(0, position);
+		string part2 = wiring.substr(position, ALPHABET_SIZE - position);
+		wiring_ = part2 + part1;
+		//wiring_ = wiring;
+	}
+	
+	char encryptForward(char c) {
+		int index = wiring_.find(c);
+		return ALPHABET[index];
+	}
+	
+	char encryptBackward(char c) {
+		size_t index = ALPHABET.find(c);
+		return wiring_[index];
+	}
+	
+	void rotate() {
+		char tmp = wiring_[0];
+		for (int i = 0; i < ALPHABET_SIZE - 1; i++)
+		{
+			wiring_[i] = wiring_[i + 1];
+		}
+		wiring_[ALPHABET_SIZE - 1] = tmp;
+	}
+	
+	private:
+	string wiring_;
+};
+
+class Reflector {
+	public:
+	Reflector(const string wiring)
+	{
+		wiring_ = wiring;
+		for (int i = 0; i < wiring.size(); i += 1)
+		{
+			if (i % 2 == 0)
+			{
+				wiring_[i] = wiring[i + 1];
+			}
+			else
+			{
+				wiring_[i] = wiring[i - 1];
+			}
+		}
+	}
+	
+	char reflect(char c) {
+		return wiring_[ALPHABET.find(c)];
+	}
+	
+	private:
+	string wiring_;
+};
+
+class Enigma {
+	public:
+	Enigma(const vector<Rotor>& rotors, const Reflector& reflector)
+	: rotors_(rotors), reflector_(reflector) {}
+	
+	string encryptMessage(const string& message) {
+		string encryptedMessage;
+		for (char c : message) {
+			if (isInAlphabet(c)) {
+				encryptedMessage += encryptChar(c);
+				rotateRotors();
+			}
+			else {
+				encryptedMessage += c; 
+			}
+		}
+		return encryptedMessage;
+	}
+	
+	void encryptFile(const string& inputFile, const string& outputFile) {
+		ifstream inFile(inputFile, ios::binary);
+		ofstream outFile(outputFile, ios::binary);
+		
+		if (!inFile.is_open() || !outFile.is_open()) {
+			cerr << "Error" << endl;
+			return;
+		}
+		
+		char buffer;
+		while (inFile.get(buffer)) {
+			if (isInAlphabet(buffer)) {
+				buffer = encryptChar(buffer);
+				rotateRotors();
+			}
+			outFile.put(buffer);
+		}
+		
+		inFile.close();
+		outFile.close();
+	}
+	
+	private:
+	vector<Rotor> rotors_;
+	Reflector reflector_;
+	int cnt_ = 0;
+	
+
+	char encryptChar(char c) {
+		for (Rotor& rotor : rotors_) {
+			c = rotor.encryptForward(c);
+		}
+		
+		c = reflector_.reflect(c);
+		
+		for (auto it = rotors_.rbegin(); it != rotors_.rend(); ++it) {
+			c = it->encryptBackward(c);
+		}
+		return c;
+	}
+	
+	void rotateRotors() {
+		cnt_++;
+		rotors_[0].rotate();
+		if (cnt_ % ALPHABET_SIZE == 0)
+		rotors_[1].rotate();
+		if (cnt_ % (ALPHABET_SIZE * ALPHABET_SIZE) == 0)
+		rotors_[2].rotate();
+		
+	}
+	
+	bool isInAlphabet(char c) {
+		return ALPHABET.find(c) != string::npos;
+	}
+};
+
+\end{lstlisting}
+\end{center}
+\section*{Вывод}
+
+Были представлены листинги реализаций алгоритма шифрования в машине <<Энигма>> согласно алгоритму, представленному в первой части, а также проведено тестирование разработанной программы.
