@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\abcd2\OneDrive\Desktop\7-SEM-HIEU\7-SEM-InfoSecurity\lab_01\lab_01\main.cpp(32,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  lab_01.vcxproj -> C:\Users\abcd2\OneDrive\Desktop\7-SEM-HIEU\7-SEM-InfoSecurity\lab_01\x64\Debug\lab_01.exe

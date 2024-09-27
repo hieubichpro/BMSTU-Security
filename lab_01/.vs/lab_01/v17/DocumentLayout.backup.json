@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\abcd2\\OneDrive\\Desktop\\7-SEM-HIEU\\7-SEM-InfoSecurity\\lab_01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7A095E-1172-4B5F-A32F-57151FE9C109}|lab_01\\lab_01.vcxproj|C:\\Users\\abcd2\\OneDrive\\Desktop\\7-SEM-HIEU\\7-SEM-InfoSecurity\\lab_01\\lab_01\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CC7A095E-1172-4B5F-A32F-57151FE9C109}|lab_01\\lab_01.vcxproj|solutionrelative:lab_01\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\abcd2\\OneDrive\\Desktop\\7-SEM-HIEU\\7-SEM-InfoSecurity\\lab_01\\lab_01\\main.cpp",
+              "RelativeDocumentMoniker": "lab_01\\main.cpp",
+              "ToolTip": "C:\\Users\\abcd2\\OneDrive\\Desktop\\7-SEM-HIEU\\7-SEM-InfoSecurity\\lab_01\\lab_01\\main.cpp*",
+              "RelativeToolTip": "lab_01\\main.cpp*",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAAAL0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-27T10:10:35.543Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
