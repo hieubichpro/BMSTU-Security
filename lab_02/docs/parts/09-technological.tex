@@ -1,0 +1,95 @@
+\chapter{Технологическая часть}
+
+\section{Средства реализации}
+
+Для программной реализации шифровальной машины был выбран язык C++ \cite{cpp}.
+В данном языке есть все требующиеся инструменты для данной лабораторной работы.
+В качестве среды разработки была выбрана среда Visual Studio 2022 \cite{clion}.
+
+
+
+
+\section{Реализация алгоритма}
+
+\begin{lstlisting}[label=lst:process-block,caption=Реализация алгоритма DES]
+	bitset<64> process_block(bitset<64> value, bitset<64> key, bool decrypte = false)
+	{
+		// generate keys
+		auto keys = generate_keys(key, decrypte);
+		
+		// initial permutation
+		auto round_val = IP_f(value);
+		
+		// 16 rounds
+		for (auto rkey : keys) {
+			round_val = wround(round_val, rkey);
+		}
+		
+		// final permutation
+		auto final_val = FP_f(round_val);
+		
+		return final_val;
+	}
+\end{lstlisting}
+
+
+\begin{lstlisting}[label=lst:ecb,caption=Реализация метода шифрования и дешифрования DES в режиме CBС]
+vector<char> cypher(vector<char> input, vector<char> key, vector<char> vi)
+{
+	vector<char> buffer = {};
+	vector<char> result = {};
+	
+	int last_cnt = 0;
+	
+	auto vi_initial = vchar_to_bitset64(vi);
+	auto key_b = vchar_to_bitset64(key);
+	
+	
+	for (auto sym : input) {
+		if (buffer.size() < 8) {
+			buffer.push_back(sym);
+		}
+		
+		if (buffer.size() == 8) {
+			// buffer size is 8 -> can be cyphered
+			auto buf_b = vchar_to_bitset64(buffer) ^ vi_initial;
+			
+			auto tmp_b_1 = _des.process_block(buf_b, key_b);
+			
+			vi_initial = tmp_b_1;
+			
+			auto tmp_res = bitset64_to_vchar(tmp_b_1);
+			
+			result.insert(result.end(), tmp_res.begin(), tmp_res.end());
+			
+			buffer.clear();
+		}
+	}
+	
+	if (buffer.size() > 0 && buffer.size() < 8) {
+		while (buffer.size() < 8) {
+			buffer.push_back((char)0);
+			last_cnt += 1;
+		}
+		auto buf_b = vchar_to_bitset64(buffer) ^ vi_initial;
+		
+		auto tmp_b_1 = _des.process_block(buf_b, key_b);
+		
+		vi_initial = tmp_b_1;
+		
+		auto tmp_res = bitset64_to_vchar(tmp_b_1);
+		
+		result.insert(result.end(), tmp_res.begin(), tmp_res.end());
+	}
+	
+	result.push_back((char)last_cnt);
+	
+	
+	return result;
+}
+}
+\end{lstlisting}
+
+\section*{Вывод}
+
+В данном разделе были рассмотрены средства реализации, а также представлены листинги реализации шифровального алгоритма DES и режима работы CBC.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.6)  27 SEP 2024 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.6)  28 SEP 2024 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,7 +1311,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/b_logo.jpg, id=55, 57.816pt x 65.3715pt>
+<img/b_logo.jpg, id=59, 57.816pt x 65.3715pt>
 File: img/b_logo.jpg Graphic file (type jpg)
 <use img/b_logo.jpg>
 Package pdftex.def Info: img/b_logo.jpg  used on input line 5.
@@ -1466,7 +1466,7 @@ l.10 \include{introd}
 
  (design.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-<img/enigma-algo.png, id=92, 341.275pt x 632.3625pt>
+<img/enigma-algo.png, id=96, 341.275pt x 632.3625pt>
 File: img/enigma-algo.png Graphic file (type png)
 <use img/enigma-algo.png>
 Package pdftex.def Info: img/enigma-algo.png  used on input line 13.
@@ -1513,13 +1513,13 @@ File: ts1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ] (main.aux (title.aux) (introd.aux)
 (analysis.aux) (design.aux) (implement.aux) (conclusion.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 71B098F20FEDF7C3341C9075DC024BFE;2110.
+(rerunfilecheck)             Checksum: 91ED6E655BB0514835DBF23F6408528E;2261.
  ) 
 Here is how much of TeX's memory you used:
- 39184 strings out of 476331
- 918720 string characters out of 5787766
+ 39188 strings out of 476331
+ 918780 string characters out of 5787766
  1939660 words of memory out of 5000000
- 58738 multiletter control sequences out of 15000+600000
+ 58740 multiletter control sequences out of 15000+600000
  528041 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,10n,99p,759b,2247s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1536,9 +1536,9 @@ ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\abcd2\AppData\Local\MiKTeX\fonts
 onts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk><C:/Users/abcd2/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/abcd2/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (11 pages, 277078 bytes).
+Output written on main.pdf (11 pages, 284325 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 183 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 185 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 
