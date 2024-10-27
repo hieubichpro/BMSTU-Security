@@ -233,21 +233,23 @@ int main() {
 
     // Пример шифрования текстового сообщения
 
-    string message = "HelloEnigmaFromMoskva";
-    string encryptedMessage = enigma.encryptMessage(message);
-    cout << "Encrypted message: " << encryptedMessage << endl;
+    //string message = "HelloEnigmaFromMoskva";
+    //string encryptedMessage = enigma.encryptMessage(message);
+    //cout << "Encrypted message: " << encryptedMessage << endl;
 
-    cout << "Encrypted message: " << enigma1.encryptMessage(encryptedMessage) << endl;
+    //cout << "Encrypted message: " << enigma1.encryptMessage(encryptedMessage) << endl;
 
     // //Пример шифрования файла
     //enigma.encryptFile("input.txt", "output.txt");
     //enigma1.encryptFile("output.txt", "output1.txt");
 
-    ////Пример шифрования файла
+    //Пример шифрования файла
     //enigma.encryptFile("test.zip", "test1.pdf");
-    //enigma1.encryptFile("test1.pdf", "test1.zip");
-    //enigma.encryptFile("a.pdf", "test2.enc");
-    //enigma.encryptFile("test2.enc", "b.pdf");
+    //enigma1.encryptFile("test1.pdf", "test100.zip");
+    // 
+    // 
+    enigma.encryptFile("a.pdf", "test2.enc");
+    enigma.encryptFile("test2.enc", "d.pdf");
 
 
 
