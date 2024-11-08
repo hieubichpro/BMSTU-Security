@@ -172,7 +172,7 @@ protected:
     }
     vector<bitset<48>> generate_keys(bitset<64> key, bool decrypte = false)
     {
-        auto after_PC1 = PC1_f(key);
+        auto after_PC1 = PC1_f(key); //56
         vector<bitset<48>> res = {};
 
         for (auto shift : key_shift_cnt)
@@ -210,7 +210,7 @@ protected:
 
             for (int i = 0; i < 28; i++) {
                 after_PC1[i] = left[i];
-                after_PC1[i + 27] = right[i];
+                after_PC1[i + 28] = right[i];   // i + 28 ???
             }
             res.push_back(PC2_f(after_PC1));
         }
@@ -547,34 +547,42 @@ void write_bytes_into_file(string fname, vector<char> data) {
 int main()
 {
     CBC cbc;
-    string message = "HelloEnigma123456FromMosckvaRussia";
-    //string key = "2a4c1123";
-    //string vi = "12a3v4sh";
-    vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
-    vector<char> vi = { '1', 'a', 't', 'c', 's', 'h' , 'a', 'b'};
-    //auto encryte = cbc.cypher(message, key, vi);
-    //cout << "p1 " << encryte << endl;
-    //cout << "p2 " << cbc.decypher(encryte, key, vi);
 
 
+    //string mesagge = "";
+    //string message = "a";
+    string message = "a reader will be distracted by the readable content of a page when looking at it";
+    string key = "2a4c1123";
+    string vi = "12a3v4sh";
+    auto encryte = cbc.cypher(message, key, vi);
+    cout << "Plained  message: " << message << endl;
+    cout << message.length() << endl;
+    cout << "Encryted message: " << encryte << endl;
+    cout << encryte.length() << endl;
+    string decryted = cbc.decypher(encryte, key, vi);
+    cout << "Decryted message: " << decryted << endl;
+    cout << decryted.length() << endl;
 
+
+    //vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
+    //vector<char> vi = { '1', 'a', 't', 'c', 's', 'h' , 'a', 'b'};
     //vector<char> test = read_bytes_from_file("a.pdf");
     //cout << test.size() << endl;
     //auto encrypt_text = cbc.cypher(test, key, vi);
     //write_bytes_into_file("a.enc", encrypt_text);
-
     //auto decrypt_text = cbc.decypher(encrypt_text, key, vi);
     //write_bytes_into_file("res.pdf", decrypt_text);
 
 
+    //vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
+    //vector<char> vi = { '1', 'a', 't', 'c', 's', 'h' , 'a', 'b'};
+    //vector<char> test = read_bytes_from_file("test.zip");
+    //cout << test.size() << endl;
+    //auto encrypt_text = cbc.cypher(test, key, vi);
+    //write_bytes_into_file("test.enc", encrypt_text);
 
-    vector<char> test = read_bytes_from_file("test.zip");
-    cout << test.size() << endl;
-    auto encrypt_text = cbc.cypher(test, key, vi);
-    write_bytes_into_file("test.enc", encrypt_text);
-
-    auto decrypt_text = cbc.decypher(encrypt_text, key, vi);
-    write_bytes_into_file("test2.zip", decrypt_text);
+    //auto decrypt_text = cbc.decypher(encrypt_text, key, vi);
+    //write_bytes_into_file("test2.zip", decrypt_text);
 
 
     cout << "all runned ok" << endl;
