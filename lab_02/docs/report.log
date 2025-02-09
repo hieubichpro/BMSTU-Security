@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.6)  8 NOV 2024 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.6)  9 NOV 2024 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1443,7 +1443,7 @@ Package hyperref Info: Link coloring OFF on input line 5.
 \openout2 = `parts/01-title.aux'.
 
  (parts/01-title.tex
-<img/b_logo.jpg, id=51, 57.816pt x 65.3715pt>
+<img/b_logo.jpg, id=55, 57.816pt x 65.3715pt>
 File: img/b_logo.jpg Graphic file (type jpg)
 <use img/b_logo.jpg>
 Package pdftex.def Info: img/b_logo.jpg  used on input line 3.
@@ -1516,7 +1516,7 @@ LaTeX Font Warning: Font shape `T2A/cmr/m/it' in size <20> not available
 
 
 ]
-<img/des.png, id=105, 329.73187pt x 298.11375pt>
+<img/des.png, id=110, 329.73187pt x 298.11375pt>
 File: img/des.png Graphic file (type png)
 <use img/des.png>
 Package pdftex.def Info: img/des.png  used on input line 28.
@@ -1524,7 +1524,7 @@ Package pdftex.def Info: img/des.png  used on input line 28.
  [6
 
  <./img/des.png>]
-<img/cbc.png, id=113, 575.751pt x 464.937pt>
+<img/cbc.png, id=118, 575.751pt x 464.937pt>
 File: img/cbc.png Graphic file (type png)
 <use img/cbc.png>
 Package pdftex.def Info: img/cbc.png  used on input line 49.
@@ -1537,12 +1537,12 @@ Package pdftex.def Info: img/cbc.png  used on input line 49.
 
 LaTeX Warning: Reference `fig:des-ecb' on page 8 undefined on input line 7.
 
-<img/des-al.png, id=121, 285.065pt x 556.0775pt>
+<img/des-al.png, id=126, 285.065pt x 556.0775pt>
 File: img/des-al.png Graphic file (type png)
 <use img/des-al.png>
 Package pdftex.def Info: img/des-al.png  used on input line 11.
 (pdftex.def)             Requested size: 193.47578pt x 377.41495pt.
-<img/round.png, id=122, 473.77pt x 244.915pt>
+<img/round.png, id=127, 473.77pt x 244.915pt>
 File: img/round.png Graphic file (type png)
 <use img/round.png>
 Package pdftex.def Info: img/round.png  used on input line 18.
@@ -1553,7 +1553,7 @@ Package pdftex.def Info: img/round.png  used on input line 18.
 
 
  <./img/des-al.png>] [9 <./img/round.png>]
-<img/function.png, id=137, 323.2075pt x 596.2275pt>
+<img/function.png, id=142, 323.2075pt x 596.2275pt>
 File: img/function.png Graphic file (type png)
 <use img/function.png>
 Package pdftex.def Info: img/function.png  used on input line 27.
@@ -1590,10 +1590,12 @@ LaTeX Font Info:    Trying to load font information for TS1+cmss on input line
  (C:\Users\abcd2\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
 File: ts1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-[12]) [13]
+[12] [13] [14]) [15
+
+]
 \openout2 = `parts/11-conclusion.aux'.
 
- (parts/11-conclusion.tex) [14
+ (parts/11-conclusion.tex) [16
 
 
 
@@ -1613,7 +1615,7 @@ Underfull \hbox (badness 3199) in paragraph at lines 12--16
 ]\T2A/cmr/m/n/14.4 .  да-та об-ра-ще-ния:
  []
 
-)) [15
+)) [17
 
 
 
@@ -1631,13 +1633,13 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 4647BF78123DD16D2360A62598D35E3C;2020.
+(rerunfilecheck)             Checksum: 31CAA5137829C8F054216FC06C3933F0;2172.
  ) 
 Here is how much of TeX's memory you used:
- 40832 strings out of 476331
- 946671 string characters out of 5787766
+ 40839 strings out of 476331
+ 946765 string characters out of 5787766
  1923660 words of memory out of 5000000
- 60320 multiletter control sequences out of 15000+600000
+ 60323 multiletter control sequences out of 15000+600000
  532699 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,12n,99p,853b,2089s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1656,9 +1658,9 @@ eX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labi2074.pk> <C:\Users\abcd2\AppData\Local\
 MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\abcd2\AppData\Lo
 cal\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\abcd2\AppDat
 a\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk>
-Output written on report.pdf (14 pages, 384834 bytes).
+Output written on report.pdf (16 pages, 392261 bytes).
 PDF statistics:
- 829 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 859 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
+ 159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

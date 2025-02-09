@@ -551,27 +551,29 @@ int main()
 
     //string mesagge = "";
     //string message = "a";
-    string message = "a reader will be distracted by the readable content of a page when looking at it";
-    string key = "2a4c1123";
-    string vi = "12a3v4sh";
-    auto encryte = cbc.cypher(message, key, vi);
-    cout << "Plained  message: " << message << endl;
-    cout << message.length() << endl;
-    cout << "Encryted message: " << encryte << endl;
-    cout << encryte.length() << endl;
-    string decryted = cbc.decypher(encryte, key, vi);
-    cout << "Decryted message: " << decryted << endl;
-    cout << decryted.length() << endl;
+    //string message = "a reader will be distracted by the readable content of a page when looking at it";
+    //string key = "2a4c1123";
+    //string vi = "12a3v4sh";
+    //auto encryte = cbc.cypher(message, key, vi);
+    //cout << "Plained  message: " << message << endl;
+    //cout << message.length() << endl;
+    //cout << "Encryted message: " << encryte << endl;
+    //cout << encryte.length() << endl;
+    //string decryted = cbc.decypher(encryte, key, vi);
+    //cout << "Decryted message: " << decryted << endl;
+    //cout << decryted.length() << endl;
 
 
-    //vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
-    //vector<char> vi = { '1', 'a', 't', 'c', 's', 'h' , 'a', 'b'};
+    vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
+    vector<char> vi = { '1', 'a', 't', 'c', 's', 'h' , 'a', 'b'};
     //vector<char> test = read_bytes_from_file("a.pdf");
-    //cout << test.size() << endl;
+    ////cout << test.size() << endl;
     //auto encrypt_text = cbc.cypher(test, key, vi);
     //write_bytes_into_file("a.enc", encrypt_text);
-    //auto decrypt_text = cbc.decypher(encrypt_text, key, vi);
-    //write_bytes_into_file("res.pdf", decrypt_text);
+    vector<char> encrypt_text = read_bytes_from_file("a.enc");
+
+    auto decrypt_text = cbc.decypher(encrypt_text, key, vi);
+    write_bytes_into_file("res1.pdf", decrypt_text);
 
 
     //vector<char> key = { '2', 'a', '4', 'c', '1', '1' , '2', '3'};
@@ -585,7 +587,7 @@ int main()
     //write_bytes_into_file("test2.zip", decrypt_text);
 
 
-    cout << "all runned ok" << endl;
+    //cout << "all runned ok" << endl;
 
     return 0;
 
